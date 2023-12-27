@@ -55,7 +55,7 @@ void DeleteMaps()
 	// Loop through all files in /tf/maps folder
 	char		 filename[PLATFORM_MAX_PATH];
 	FileType type;
-	char		 regexStr[PLATFORM_MAX_PATH];
+	char		 regexStr[512];
 	MapDeleterRegex.GetString(regexStr, sizeof(regexStr));
 	Regex regex = new Regex(regexStr);
 	while (dir.GetNext(filename, sizeof(filename), type))
